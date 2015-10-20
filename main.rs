@@ -8,8 +8,10 @@ fn main() {
 }
 
 fn bubble_sort(arr: &mut [i32]) {
-    loop {
-        let mut swapped = false;
+    let mut swapped = true;
+
+    while swapped {
+        swapped = false;
         let length = arr.len() - 1;
 
         for i in 0..length {
@@ -17,9 +19,6 @@ fn bubble_sort(arr: &mut [i32]) {
                 arr.swap(i, i+1);
                 swapped = true;
             }
-        }
-        if swapped == false {
-            break;
         }
     }
 }

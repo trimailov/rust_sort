@@ -14,9 +14,7 @@ fn bubble_sort(arr: &mut [i32]) {
 
         for i in 0..length {
             if arr[i+1] < arr[i] {
-                let temp = arr[i+1];
-                arr[i+1] = arr[i];
-                arr[i] = temp;
+                arr.swap(i, i+1);
                 swapped = true;
             }
         }
